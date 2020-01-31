@@ -1,0 +1,16 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  vars:
+    filebeat_version: 7.x
+    filebeat_create_config: true
+    filebeat_inputs_type: log
+    filebeat_enabled: true
+    filebeat_paths:
+      "- /var/log/*.log"
+    filebeat_json: "json.message_key: message"
+    filebeat_cloud_id: "XPTO"
+    filebeat_cloud_auth: "XPTO"
+  roles:
+    - role: filebeat
