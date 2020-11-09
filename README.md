@@ -1,3 +1,3 @@
 # Elastic Filebeat Ansible Role
 
-Ansible role to configure filebeat.
+Ansible role for configure Elastic Filebeat.
